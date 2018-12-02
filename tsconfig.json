@@ -1,0 +1,19 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+		"outDir": "./dist/",
+		"sourceMap": true,
+		"noImplicitAny": true,
+		"module": "esnext",
+		"target": "es2017",
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "baseUrl": "./src"
+	},
+	"include": [
+		"./src/**/*.tsx",
+		"./src/**/*.ts"
+	]
+}
