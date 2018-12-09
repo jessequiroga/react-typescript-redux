@@ -3,7 +3,7 @@
 	"compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
-		"outDir": "./dist/",
+		"outDir": "./public/assets/",
 		"sourceMap": true,
 		"noImplicitAny": true,
 		"module": "esnext",
