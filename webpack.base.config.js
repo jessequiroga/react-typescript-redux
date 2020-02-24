@@ -5,7 +5,7 @@ const title = require('./package').title;
 module.exports = {
 	entry: ["./src/index.tsx"],
 	output: {
-		path: path.resolve(__dirname, './public/'),
+		path: path.resolve(__dirname, 'public/'),
 		filename: "bundle.js",
 	},
 	resolve: {
@@ -51,9 +51,15 @@ module.exports = {
 			},
 		]
 	},
+	devServer: {
+		contentBase: path.resolve(__dirname, 'public/'),
+		historyApiFallback: true,
+		host: '0.0.0.0',
+		port: 8080,
+	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './src/index.ejs',
+			template: path.resolve(__dirname, 'src/index.ejs'),
 			templateParameters: (compilation, assets, assetTags, options) => {
 				return {
 					compilation,
