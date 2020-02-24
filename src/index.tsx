@@ -1,21 +1,22 @@
+import { AppContainer } from 'react-hot-loader';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { AppContainer } from "react-hot-loader";
 import { Provider } from 'react-redux';
 
-import App from './components/App';
-import store from './store';
-import './styles/main.scss';
+import MainPage from 'Pages/MainPage';
+import store from 'Store';
+import 'Styles/main.scss';
 
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(
+ReactDOM.render((
   <AppContainer>
 	  <Provider store={ store }>
-      <App />
+      <MainPage />
 	  </Provider>
   </AppContainer>
-  , rootElement
+  ),
+  rootElement,
 );
 
 declare let module: { hot: any };

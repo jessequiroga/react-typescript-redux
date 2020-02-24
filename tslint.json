@@ -1,44 +1,32 @@
 {
   "defaultSeverity": "error",
-  "formatter": "codeFrame",
   "extends": [
     "tslint-config-airbnb",
-    "tslint-eslint-rules",
-    "tslint-react"
+    "tslint-react",
+    "tslint-config-prettier"
   ],
   "jsRules": {},
   "rules": {
-    "quotemark": [
-      true,
-      "single",
-      "jsx-double"
-    ],
-    "indent": [true],
-    "interface-name": [false],
-    "arrow-parens": false,
-    "object-literal-sort-keys": false,
-    "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
-    "no-consecutive-blank-lines": false,
-    "member-access": false,
-    "ordered-imports": false,
-    "no-console": false,
-    "ter-arrow-parens": [true, "always"],
-    "import-name": false,
-    "object-shorthand-properties-first": false,
-    "no-increment-decrement": false,
-    "prefer-destructuring": false,
-    "function-name": false,
-    "no-unused-variable": [true, "check-parameters"],
-    "align": false,
-    "strict-boolean-expressions": false,
-    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case"],
     "max-line-length": [true, 150],
-
-    "jsx-quotes": ["error", "prefer-double"],
-    "jsx-curly-spacing": [true, "always"],
+    "trailing-comma": false,
+    "semicolon": [true, "always"],
+    "indent": [true],
+    "ordered-imports": false,
+    "ter-indent": [
+      true,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "variable-name": false,
+    "import-name": false,
+    "jsx-alignment": true,
     "jsx-equals-spacing": [true, "never"],
+    "jsx-no-string-ref": true,
+    "jsx-self-close": true,
     "jsx-no-lambda": [false, "never"],
-    "jsx-no-multiline-js": [false, "never"]
+    "jsx-wrap-multiline": true
   },
   "rulesDirectory": []
 }

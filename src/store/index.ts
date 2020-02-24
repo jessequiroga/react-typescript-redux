@@ -1,17 +1,16 @@
-import { combineReducers } from 'redux';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import createStore from './create';
+import counterStore, { initialState as counterInitialState } from './counter/reducer';
 
-
-const reducers = combineReducers({});
-
-const store = createStore(reducers, applyMiddleware(thunk))
-
-export type Action = {
-  type: string,
-  payload: any,
+const reducers = {
+  counterStore,
 };
-export const create = (type: string, payload: any = {}): Action => ({ type, payload }); 
 
+const initialState = {
+  counterStore: counterInitialState,
+};
+
+const store = createStore(reducers, initialState);
+
+export const create = (type: string, payload?: any) => ({ type, payload });
 export type Store = typeof store;
 export default store;
