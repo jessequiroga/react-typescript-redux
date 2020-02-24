@@ -1,13 +1,9 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const title = require('./package').title;
 
 module.exports = {
-	entry: [
-    'react-hot-loader/patch',
-    "./src/index.tsx"
-  ],
+	entry: ["./src/index.tsx"],
 	output: {
 		path: path.resolve(__dirname, './public/'),
 		filename: "bundle.js",
@@ -44,13 +40,13 @@ module.exports = {
 			{
 				test: /\.(gif|png|jpe?g|svg)$/,
 				use: [
-						'file-loader',
-						{
-								loader: 'image-webpack-loader',
-								options: {
-										bypassOnDebug: true
-								}
+					'file-loader',
+					{
+						loader: 'image-webpack-loader',
+						options: {
+							bypassOnDebug: true
 						}
+					}
 				]
 			},
 		]
@@ -59,17 +55,17 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './src/index.ejs',
 			templateParameters: (compilation, assets, assetTags, options) => {
-					return {
-							compilation,
-							webpackConfig: compilation.options,
-							htmlWebpackPlugin: {
-									tags: assetTags,
-									files: assets,
-									options
-							},
-							'title': title || null
-					};
+				return {
+					compilation,
+					webpackConfig: compilation.options,
+					htmlWebpackPlugin: {
+						tags: assetTags,
+						files: assets,
+						options
+					},
+					'title': title || null
+				};
 			},
-	}),
+		}),
 	],
 };
