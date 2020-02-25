@@ -22,6 +22,7 @@
     "variable-name": false,
     "import-name": false,
     "jsx-alignment": true,
+    "jsx-boolean-value": false,
     "jsx-equals-spacing": [true, "never"],
     "jsx-no-string-ref": true,
     "jsx-self-close": true,

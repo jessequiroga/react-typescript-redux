@@ -12,6 +12,7 @@ module.exports = {
 		extensions: [".ts", ".tsx", ".js"],
 		alias: {
 			Components: path.resolve(__dirname, 'src/components/'),
+			Navigation: path.resolve(__dirname, 'src/navigation/'),
 			Pages: path.resolve(__dirname, 'src/pages/'),
 			Store: path.resolve(__dirname, 'src/store/'),
 			Styles: path.resolve(__dirname, 'src/styles/'),
