@@ -9,9 +9,6 @@ or (if you have [ssh key](https://help.github.com/enterprise/2.12/user/articles/
 ```
 git clone git@gitlab.com:Michael02/swtor-characters-mobile.git
 ```
-##### Or just click download button 
-on top of repository or [here](https://gitlab.com/Michael02/swtor-characters-mobile/-/archive/master/swtor-characters-mobile-master.zip) to download .zip
-
 ### Instalation
 ```
 npm i
